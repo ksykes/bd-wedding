@@ -11,6 +11,9 @@
 # production
 /build
 
+# image source files
+/engagement_photos
+
 # misc
 .DS_Store
 .env.local
