@@ -3,25 +3,9 @@ import React, { Component } from 'react'
 class RSVP extends Component {
     render() {
         return (
-            <div>
-                <form action="">
-                    <div>
-                        <label>First Name</label>
-                        <input type="text" name='firstname'/>
-                    </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input type="text" name='lastname' required minLength='1' />
-                    </div>
-                    <fieldset>
-                        <legend>Will you be coming?</legend>
-                        <input type="radio" id='yes' name='rsvp' required />
-                        <label htmlFor='yes'>Accept with pleasure</label>
-                        <input type="radio" id='no' name='rsvp' required />
-                        <label htmlFor='no'>Decline with regret</label>
-                    </fieldset>
-                </form>
-            </div>
+            <section className="rsvp">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPW1829PoKd7SQlW6fIRyRhYZEnuYWcsHmjdbhls5XXuaOuQ/viewform?embedded=true" width="640" height="1164" frameBorder="0" marginHeight="0" marginWidth="0" title="RSVP">Loading...</iframe>
+            </section>
         )
     }
 }

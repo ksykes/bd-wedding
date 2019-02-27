@@ -1,14 +1,15 @@
 div#root,
 div.App {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 div.App {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
 }
 
 body {
@@ -19,12 +20,14 @@ body {
         ),
         url(images/hero.jpg);
     background-size: cover;
+    background-position: center;
     font-family: 'Lato', sans-serif;
 }
 
 header {
     width: 100%;
     text-align: center;
+    margin: 4rem 0;
 }
 
 header a {
@@ -35,7 +38,7 @@ header a {
 header h1 {
     font-size: 5.5rem;
     letter-spacing: 0.25rem;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 header h2 {
@@ -44,10 +47,10 @@ header h2 {
 }
 
 nav {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,8 +76,65 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(108, 70, 78)
+}
+
+section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4rem;
+    text-align: center;
+}
+
+section.rsvp {
+    background-color: transparent;
+}
+
+section p {
+    margin: 0;
 }
 
 section.save {
     color: white;
+}
+
+section.details iframe {
+    margin-top: 2rem;
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    color: rgb(255, 238, 241);
+}
+
+footer a {
+    color: rgb(255, 238, 241);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(108, 70, 78);
+}
+
+@media only screen and (min-device-width: 375px) {
+    body {
+        width: 100%;
+        /* height: 100%; */
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    section {
+        width: 100%;
+    }
+    section.rsvp iframe {
+        width: 100%;
+    }
 }
