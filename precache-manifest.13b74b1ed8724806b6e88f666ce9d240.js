@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/bd-wedding/static/js/runtime~main.18de81c5.js"
   },
   {
-    "revision": "1aaa5c7320768d48f8d9",
-    "url": "/bd-wedding/static/js/main.1aaa5c73.chunk.js"
+    "revision": "4a2229f43f1d35d4e5e5",
+    "url": "/bd-wedding/static/js/main.4a2229f4.chunk.js"
   },
   {
     "revision": "828f3f33266d11a32de1",
     "url": "/bd-wedding/static/js/1.828f3f33.chunk.js"
   },
   {
-    "revision": "1aaa5c7320768d48f8d9",
-    "url": "/bd-wedding/static/css/main.b15ac66c.chunk.css"
+    "revision": "4a2229f43f1d35d4e5e5",
+    "url": "/bd-wedding/static/css/main.922d0b06.chunk.css"
   },
   {
-    "revision": "d8e9e65c02443452921c1bedbfe4c0cb",
+    "revision": "623721dcdcc2b47fdf025c05ee4fee28",
     "url": "/bd-wedding/index.html"
   }
 ];
