@@ -46,49 +46,48 @@ class RSVP extends Component {
                     </label>
                     <fieldset>
                         <legend>RSVP:</legend>
-                        <label htmlFor="yes">
-                            <input type="radio" id="yes" name="rsvp" value="Yes" onChange={this.handleChange} />
+                        <label htmlFor="RSVPyes">
+                            <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.handleChange} />
                             Accepts with pleasure
                         </label>
-                        <label htmlFor="no">
-                            <input type="radio" id="no" name="rsvp" value="No" onChange={this.handleChange} />
+                        <label htmlFor="RSVPno">
+                            <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.handleChange} />
                             Denies with regret
                         </label>
                     </fieldset>
                     <fieldset>
                         <legend>Dinner choice:</legend>
-                        <label htmlFor="one">
-                            <input type="radio" id="one" name="dinner" value="Option 1" onChange={this.handleChange} />
+                        <label htmlFor="dinnerOne">
+                            <input type="radio" id="dinnerOne" name="dinner" value="Option 1" onChange={this.handleChange} />
                             Option 1
                         </label>
-                        <label htmlFor="two">
-                            <input type="radio" id="two" name="dinner" value="Option 2" onChange={this.handleChange} />
+                        <label htmlFor="dinnerTwo">
+                            <input type="radio" id="dinnerTwo" name="dinner" value="Option 2" onChange={this.handleChange} />
                             Option 2
                         </label>
-                        <label htmlFor="three">
-                            <input type="radio" id="three" name="dinner" value="Option 3" onChange={this.handleChange} />
+                        <label htmlFor="dinnerThree">
+                            <input type="radio" id="dinnerThree" name="dinner" value="Option 3" onChange={this.handleChange} />
                             Option 3
                         </label>
                     </fieldset>
                     <hr/>
                     <p>If you don't have a plus one, leave this section blank...</p>
-                    <legend>Plus One</legend>
                     <label htmlFor="plusOneName">
                         <input type="text" name="plusOneName" value={plusOneName} onChange={this.handleChange} />
                         Your plus one's name
                     </label>
                     <fieldset>
                         <legend>Your plus one's dinner choice:</legend>
-                        <label htmlFor="one">
-                            <input type="radio" id="one" name="plusOneDinner" value="Option 1" onChange={this.handleChange} />
+                        <label htmlFor="plusOne">
+                            <input type="radio" id="plusOne" name="plusOneDinner" value="Option 1" onChange={this.handleChange} />
                             Option 1
                         </label>
-                        <label htmlFor="two">
-                            <input type="radio" id="two" name="plusOneDinner" value="Option 2" onChange={this.handleChange} />
+                        <label htmlFor="plusTwo">
+                            <input type="radio" id="plusTwo" name="plusOneDinner" value="Option 2" onChange={this.handleChange} />
                             Option 2
                         </label>
-                        <label htmlFor="three">
-                            <input type="radio" id="three" name="plusOneDinner" value="Option 3" onChange={this.handleChange} />
+                        <label htmlFor="plusThree">
+                            <input type="radio" id="plusThree" name="plusOneDinner" value="Option 3" onChange={this.handleChange} />
                             Option 3
                         </label>
                     </fieldset>
