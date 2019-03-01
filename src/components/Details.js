@@ -9,7 +9,7 @@ class Details extends Component {
                 <p>9550 Pine Valley Dr</p>
                 <p>Woodbridge, ON L4L 1A6</p>
                 <p>(905) 832-2289</p>
-                <iframe width="600" height="450" frameBorder="0" title="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA04APN8FXCKz0EiAanW0g_3ranDy9DRZE&q=Kortright+Centre+for+Conservation" allowFullScreen />
+                {/* <iframe width="600" height="450" frameBorder="0" title="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA04APN8FXCKz0EiAanW0g_3ranDy9DRZE&q=Kortright+Centre+for+Conservation" allowFullScreen /> */}
             </section>
         )
     }
