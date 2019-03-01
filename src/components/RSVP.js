@@ -30,6 +30,7 @@ class RSVP extends Component {
         const { name, email, address, rsvp, dinner, plusOneName, plusOneDinner } = this.state;
         return (
             <section className="rsvpForm">
+                <h2>Please RSVP by April 1, 2015.</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Your full name:</label>
                     <input type="text" name="name" value={name} onChange={this.handleChange} />
