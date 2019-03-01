@@ -16,7 +16,7 @@ class RSVP extends Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "rsvpForm": "contact", ...this.state })
+            body: encode({ "rsvpForm": "rsvp", ...this.state })
         })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
