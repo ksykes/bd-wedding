@@ -40,18 +40,18 @@ class RSVP extends Component {
                     <textarea name="address" value={address} onChange={this.handleChange}></textarea>
                     <fieldset>
                         <legend>RSVP:</legend>
-                        <input type="radio" id="yes" name="rsvp" value={rsvp} onChange={this.handleChange} />
+                        <input type="radio" id="yes" name="rsvp" value="Yes" onChange={this.handleChange} />
                         <label htmlFor="yes">Accepts with pleasure</label>
-                        <input type="radio" id="no" name="rsvp" value={rsvp} onChange={this.handleChange} />
+                        <input type="radio" id="no" name="rsvp" value="No" onChange={this.handleChange} />
                         <label htmlFor="no">Denies with regret</label>
                     </fieldset>
                     <fieldset>
                         <legend>Dinner choice:</legend>
-                        <input type="radio" id="one" name="dinner" value={dinner} onChange={this.handleChange} />
+                        <input type="radio" id="one" name="dinner" value="Option 1" onChange={this.handleChange} />
                         <label htmlFor="one">Option 1</label>
-                        <input type="radio" id="two" name="dinner" value={dinner} onChange={this.handleChange} />
+                        <input type="radio" id="two" name="dinner" value="Option 2" onChange={this.handleChange} />
                         <label htmlFor="two">Option 2</label>
-                        <input type="radio" id="three" name="dinner" value={dinner} onChange={this.handleChange} />
+                        <input type="radio" id="three" name="dinner" value="Option 3" onChange={this.handleChange} />
                         <label htmlFor="three">Option 3</label>
                     </fieldset>
                     <hr/>
@@ -61,11 +61,11 @@ class RSVP extends Component {
                     <label htmlFor="plusOneName">Name</label>
                     <fieldset>
                         <legend>Your plus one's dinner choice:</legend>
-                        <input type="radio" id="one" name="plusOneDinner" value={plusOneDinner} onChange={this.handleChange} />
+                        <input type="radio" id="one" name="plusOneDinner" value="Option 1" onChange={this.handleChange} />
                         <label htmlFor="one">Option 1</label>
-                        <input type="radio" id="two" name="plusOneDinner" value={plusOneDinner} onChange={this.handleChange} />
+                        <input type="radio" id="two" name="plusOneDinner" value="Option 2" onChange={this.handleChange} />
                         <label htmlFor="two">Option 2</label>
-                        <input type="radio" id="three" name="plusOneDinner" value={plusOneDinner} onChange={this.handleChange} />
+                        <input type="radio" id="three" name="plusOneDinner" value="Option 3" onChange={this.handleChange} />
                         <label htmlFor="three">Option 3</label>
                     </fieldset>
                     <button type="submit">Submit</button>
