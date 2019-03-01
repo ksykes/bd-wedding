@@ -12,6 +12,49 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <!-- A little help for the Netlify post-processing bots -->
+    <form name="rsvp" netlify netlify-honeypot="bot-field" hidden>
+      <label for="name">Your full name:</label>
+      <input type="text" name="name" />
+      <label for="email">Your email address</label>
+      <input type="email" name="email" />
+      <label for="address">Your mailing address</label>
+      <textarea name="address"></textarea>
+      <fieldset>
+        <legend>RSVP:</legend>
+        <input type="radio" id="yes" name="rsvp">
+        <label for="yes">Accepts with pleasure</label>
+        <input type="radio" id="no" name="rsvp">
+        <label for="no">Denies with regret</label>
+      </fieldset>
+      <fieldset>
+        <legend>Dinner choice:</legend>
+        <input type="radio" id="one" name="dinner">
+        <label for="one">Option 1</label>
+        <input type="radio" id="two" name="dinner">
+        <label for="two">Option 2</label>
+        <input type="radio" id="three" name="dinner">
+        <label for="three">Option 3</label>
+      </fieldset>
+      <fieldset>
+        <legend>Do you have a plus one?</legend>
+        <input type="radio" id="yes" name="plusOne">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="plusOne">
+        <label for="no">No</label>
+      </fieldset>
+      <label for="plusOneName">Your plus one's name:</label>
+      <input type="text" name="plusOneName" />
+      <fieldset>
+        <legend>Your plus one's dinner choice:</legend>
+        <input type="radio" id="one" name="dinner">
+        <label for="one">Option 1</label>
+        <input type="radio" id="two" name="dinner">
+        <label for="two">Option 2</label>
+        <input type="radio" id="three" name="dinner">
+        <label for="three">Option 3</label>
+      </fieldset>
+    </form>
     <div id="root"></div>
   </body>
 </html>
