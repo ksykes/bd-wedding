@@ -158,6 +158,14 @@ section.rsvpForm form button {
     margin: 0 auto;
 }
 
+section.rsvpForm form input:invalid {
+  border: 2px dashed red;
+}
+
+section.rsvpForm form label:required::after {
+    content: '*';
+}
+
 section p {
     margin: 0;
 }

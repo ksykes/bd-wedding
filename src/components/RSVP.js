@@ -33,15 +33,15 @@ class RSVP extends Component {
                 <h2>Please RSVP by April 1, 2015.</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">
-                        <input type="text" name="name" value={name} onChange={this.handleChange} />
+                        <input type="text" name="name" value={name} onChange={this.handleChange} required />
                         Your full name
                     </label>
                     <label htmlFor="email">
-                        <input type="email" name="email" value={email} onChange={this.handleChange} />
+                        <input type="email" name="email" value={email} onChange={this.handleChange} required />
                         Your email address
                     </label>
                     <label htmlFor="address">
-                        <textarea name="address" value={address} onChange={this.handleChange}></textarea>
+                        <textarea name="address" value={address} onChange={this.handleChange} required></textarea>
                         Your mailing address
                     </label>
                     <fieldset>
