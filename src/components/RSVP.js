@@ -25,15 +25,37 @@ class RSVP extends Component {
     }
     
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
-
+    
+    // lookUpGuests = () => {
+    // }
+    
     render() {
         const { name, email, address, rsvp, dinner, plusOneName, plusOneDinner } = this.state;
+        const guests = [
+            {
+                name: '---Click to select your name:---'
+            },
+            {
+                name: 'Kait Sykes',
+                plus: true,
+                plusName: 'Guest'
+            },
+            {
+                name: 'Séanin Steele',
+                plus: true,
+                plusName: 'Guest'
+            }
+        ]
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">
-                        <input type="text" name="name" value={name} onChange={this.handleChange} required />
+                        <select name="" id="name" required name="name" onChange={this.handleChange}>
+                            {guests.map((guest, index) => {
+                                return (<option key={index}>{guest.name}</option>);
+                            })}
+                        </select>
                         Your full name
                     </label>
                     <label htmlFor="email">
