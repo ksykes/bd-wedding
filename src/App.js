@@ -4,6 +4,7 @@ import Details from './components/Details'
 import Registry from './components/Registry'
 import RSVP from './components/RSVP'
 import Shower from './components/Shower'
+import Thanks from './components/Thanks'
 import './App.css'
 
 class App extends Component {

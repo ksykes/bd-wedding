@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import Step1 from './form/Step1'
 import Step2 from './form/Step2'
 
@@ -72,18 +73,25 @@ class RSVP extends Component {
         return null
     }
 
+    // Redirect to "thanks" page on form submission
+    renderRedirect = () => {
+        return <Redirect to='/thanks' />
+    }
+
+    // Handle form submission
     handleSubmit = e => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "rsvp", ...this.state })
         })
-            .then(() => alert("Success!"))
+            .then(() => this.renderRedirect())
             .catch(error => alert(error));
     
         e.preventDefault();
     }
 
+    // Handle change to inputs
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
     render() {
