@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Step1 from './form/Step1'
 import Step2 from './form/Step2'
+import guests from './data/guests'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -19,6 +20,15 @@ class RSVP extends Component {
         this._prev = this._prev.bind(this)
     }
 
+    // Update plus one name in state
+    updateGuestInfo() {
+        const plusOne = guests.findIndex(x => x.name === this.state.name)
+        const guest = guests[plusOne].plusName
+        this.setState({
+            plusOneName: guest
+        })
+    }
+
     // _next and _previous functions will be called on button click
     _next() {
         let currentStep = this.state.currentStep
@@ -27,6 +37,7 @@ class RSVP extends Component {
         this.setState({
             currentStep: currentStep
         })
+        this.updateGuestInfo()
     }
 
     _prev() {
@@ -84,7 +95,7 @@ class RSVP extends Component {
 
     // Redirect to "thanks" page on form submission
     renderRedirect = () => {
-        return <Redirect to='/thanks' />
+        return <Redirect to='/rsvp/thanks' />
     }
 
     // Handle form submission
@@ -104,23 +115,6 @@ class RSVP extends Component {
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
     render() {
-        // Guest list
-        const guests = [
-            {
-                name: '---Click to select your name:---'
-            },
-            {
-                name: 'Kait Sykes',
-                plus: true,
-                plusName: 'Guest'
-            },
-            {
-                name: 'Séanin Steele',
-                plus: true,
-                plusName: 'Guest'
-            }
-        ]
-
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>

@@ -40,7 +40,7 @@ class App extends Component {
               {/* <Route path="/registry" component={Registry} /> */}
               <Route path='/rsvp' component={RSVP} />
               {/* <Route path='/shower' component={Shower} /> */}
-              <Route path='/thanks' component={Thanks} />
+              <Route path='/rsvp/thanks' component={Thanks} />
               <footer>
                   <p>©<script type="text/javascript">document.write(new Date().getFullYear());</script> 2019 <a href="https://kaitsykes.com">Kait Sykes</a> • Made with ♥️</p>
               </footer>
