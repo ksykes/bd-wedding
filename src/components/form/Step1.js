@@ -2,12 +2,9 @@ import React, { Component } from "react";
 
 class Step1 extends Component {
     render() {
-        if(this.props.currentStep !== 1) { // Prop: The current step
+        if (this.props.currentStep !== 1) { // Prop: The current step
             return null
         }
-
-        const { name, email, address, rsvp, dinner, plusOneName, plusOneDinner } = this.state;
-
         const guests = [
             {
                 name: '---Click to select your name:---'
@@ -26,75 +23,50 @@ class Step1 extends Component {
 
         // The markup for the Step 1 UI
         return (
-            <section className="rsvpForm">
-                <h2>Please RSVP by April 1, 2015.</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">
-                        <select name="" id="name" required name="name" onChange={this.handleChange}>
-                            {guests.map((guest, index) => {
-                                return (<option key={index}>{guest.name}</option>);
-                            })}
-                        </select>
-                        Your full name
+            <div className="form-group">
+                <label htmlFor="name">
+                    <select id="name" required name="name" onChange={this.props.handleChange}>
+                        {guests.map((guest, index) => {
+                            return (<option key={index}>{guest.name}</option>);
+                        })}
+                    </select>
+                    Your full name
+                </label>
+                <label htmlFor="email">
+                    <input type="email" name="email" value={this.props.email} onChange={this.props.handleChange} required />
+                    Your email address
+                </label>
+                <label htmlFor="address">
+                    <textarea name="address" value={this.props.address} onChange={this.props.handleChange} required></textarea>
+                    Your mailing address
+                </label>
+                <fieldset>
+                    <legend>RSVP:</legend>
+                    <label htmlFor="RSVPyes">
+                        <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.props.handleChange} />
+                        Accepts with pleasure
                     </label>
-                    <label htmlFor="email">
-                        <input type="email" name="email" value={email} onChange={this.handleChange} required />
-                        Your email address
+                    <label htmlFor="RSVPno">
+                        <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.props.handleChange} />
+                        Denies with regret
                     </label>
-                    <label htmlFor="address">
-                        <textarea name="address" value={address} onChange={this.handleChange} required></textarea>
-                        Your mailing address
+                </fieldset>
+                <fieldset>
+                    <legend>Dinner choice:</legend>
+                    <label htmlFor="dinnerOne">
+                        <input type="radio" id="dinnerOne" name="dinner" value="Option 1" onChange={this.props.handleChange} />
+                        Option 1
                     </label>
-                    <fieldset>
-                        <legend>RSVP:</legend>
-                        <label htmlFor="RSVPyes">
-                            <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.handleChange} />
-                            Accepts with pleasure
-                        </label>
-                        <label htmlFor="RSVPno">
-                            <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.handleChange} />
-                            Denies with regret
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Dinner choice:</legend>
-                        <label htmlFor="dinnerOne">
-                            <input type="radio" id="dinnerOne" name="dinner" value="Option 1" onChange={this.handleChange} />
-                            Option 1
-                        </label>
-                        <label htmlFor="dinnerTwo">
-                            <input type="radio" id="dinnerTwo" name="dinner" value="Option 2" onChange={this.handleChange} />
-                            Option 2
-                        </label>
-                        <label htmlFor="dinnerThree">
-                            <input type="radio" id="dinnerThree" name="dinner" value="Option 3" onChange={this.handleChange} />
-                            Option 3
-                        </label>
-                    </fieldset>
-                    <hr />
-                    <p>If you don't have a plus one, leave this section blank...</p>
-                    <label htmlFor="plusOneName">
-                        <input type="text" name="plusOneName" value={plusOneName} onChange={this.handleChange} />
-                        Your plus one's name
+                    <label htmlFor="dinnerTwo">
+                        <input type="radio" id="dinnerTwo" name="dinner" value="Option 2" onChange={this.props.handleChange} />
+                        Option 2
                     </label>
-                    <fieldset>
-                        <legend>Your plus one's dinner choice:</legend>
-                        <label htmlFor="plusOne">
-                            <input type="radio" id="plusOne" name="plusOneDinner" value="Option 1" onChange={this.handleChange} />
-                            Option 1
-                        </label>
-                        <label htmlFor="plusTwo">
-                            <input type="radio" id="plusTwo" name="plusOneDinner" value="Option 2" onChange={this.handleChange} />
-                            Option 2
-                        </label>
-                        <label htmlFor="plusThree">
-                            <input type="radio" id="plusThree" name="plusOneDinner" value="Option 3" onChange={this.handleChange} />
-                            Option 3
-                        </label>
-                    </fieldset>
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
+                    <label htmlFor="dinnerThree">
+                        <input type="radio" id="dinnerThree" name="dinner" value="Option 3" onChange={this.props.handleChange} />
+                        Option 3
+                    </label>
+                </fieldset>
+            </div>
         )
     }
 }
