@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Step1 from './form/Step1'
+import Step2 from './form/Step2'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -9,7 +11,8 @@ const encode = (data) => {
 class RSVP extends Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", email: "", message: "", address: "", rsvp: "", dinner: "", plusOneName: "", plusOneDinner: "" };
+        // Set the initial input values
+        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", plusOneName: "", plusOneDinner: "" };
     }
 
     handleSubmit = e => {
@@ -23,97 +26,32 @@ class RSVP extends Component {
     
         e.preventDefault();
     }
-    
+
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
-    
-    // lookUpGuests = () => {
-    // }
-    
+
     render() {
         const { name, email, address, rsvp, dinner, plusOneName, plusOneDinner } = this.state;
-        const guests = [
-            {
-                name: '---Click to select your name:---'
-            },
-            {
-                name: 'Kait Sykes',
-                plus: true,
-                plusName: 'Guest'
-            },
-            {
-                name: 'Séanin Steele',
-                plus: true,
-                plusName: 'Guest'
-            }
-        ]
+
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">
-                        <select name="" id="name" required name="name" onChange={this.handleChange}>
-                            {guests.map((guest, index) => {
-                                return (<option key={index}>{guest.name}</option>);
-                            })}
-                        </select>
-                        Your full name
-                    </label>
-                    <label htmlFor="email">
-                        <input type="email" name="email" value={email} onChange={this.handleChange} required />
-                        Your email address
-                    </label>
-                    <label htmlFor="address">
-                        <textarea name="address" value={address} onChange={this.handleChange} required></textarea>
-                        Your mailing address
-                    </label>
-                    <fieldset>
-                        <legend>RSVP:</legend>
-                        <label htmlFor="RSVPyes">
-                            <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.handleChange} />
-                            Accepts with pleasure
-                        </label>
-                        <label htmlFor="RSVPno">
-                            <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.handleChange} />
-                            Denies with regret
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Dinner choice:</legend>
-                        <label htmlFor="dinnerOne">
-                            <input type="radio" id="dinnerOne" name="dinner" value="Option 1" onChange={this.handleChange} />
-                            Option 1
-                        </label>
-                        <label htmlFor="dinnerTwo">
-                            <input type="radio" id="dinnerTwo" name="dinner" value="Option 2" onChange={this.handleChange} />
-                            Option 2
-                        </label>
-                        <label htmlFor="dinnerThree">
-                            <input type="radio" id="dinnerThree" name="dinner" value="Option 3" onChange={this.handleChange} />
-                            Option 3
-                        </label>
-                    </fieldset>
-                    <hr/>
-                    <p>If you don't have a plus one, leave this section blank...</p>
-                    <label htmlFor="plusOneName">
-                        <input type="text" name="plusOneName" value={plusOneName} onChange={this.handleChange} />
-                        Your plus one's name
-                    </label>
-                    <fieldset>
-                        <legend>Your plus one's dinner choice:</legend>
-                        <label htmlFor="plusOne">
-                            <input type="radio" id="plusOne" name="plusOneDinner" value="Option 1" onChange={this.handleChange} />
-                            Option 1
-                        </label>
-                        <label htmlFor="plusTwo">
-                            <input type="radio" id="plusTwo" name="plusOneDinner" value="Option 2" onChange={this.handleChange} />
-                            Option 2
-                        </label>
-                        <label htmlFor="plusThree">
-                            <input type="radio" id="plusThree" name="plusOneDinner" value="Option 3" onChange={this.handleChange} />
-                            Option 3
-                        </label>
-                    </fieldset>
-                    <button type="submit">Submit</button>
+                    {/* Render the form steps and pass in the required props */}
+                    <Step1
+                        currentStep={this.state.currentStep}
+                        handleChange={this.handleChange}
+                        name={this.state.name}
+                        email={this.state.email}
+                        address={this.state.address}
+                        rsvp={this.state.rsvp}
+                        dinner={this.state.dinner}
+                    />
+                    <Step2
+                        currentStep={this.state.currentStep}
+                        handleChange={this.handleChange}
+                        plusOneName={this.state.plusOneName}
+                        plusOneDinner={this.state.plusOneDinner}
+                    />
                 </form>
             </section>
         )
