@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 class Step2 extends Component {
+    componentDidMount() {
+        console.log(this.props.guests)
+        const plusOne = this.props.guests.findIndex(x => x.name === this.props.guest)
+        console.log(plusOne)
+    }
+
     render() {
         if (this.props.currentStep !== 2) { // Prop: The current step
             return null
@@ -9,6 +15,9 @@ class Step2 extends Component {
         return (
             // The markup for the Step 2 UI
             <div className="form-group">
+                {/* {this.props.guests.map((guest, index) => {
+                    return (<option key={index}>{guest.name}</option>);
+                })} */}
                 <label htmlFor="plusOneName">
                     <input type="text" name="plusOneName" value={this.props.plusOneName} onChange={this.props.handleChange} />
                     Your plus one's name
@@ -28,7 +37,6 @@ class Step2 extends Component {
                         Option 3
                     </label>
                 </fieldset>
-                <button type="submit">Submit</button>
             </div>
         )
     }

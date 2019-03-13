@@ -5,28 +5,13 @@ class Step1 extends Component {
         if (this.props.currentStep !== 1) { // Prop: The current step
             return null
         }
-        const guests = [
-            {
-                name: '---Click to select your name:---'
-            },
-            {
-                name: 'Kait Sykes',
-                plus: true,
-                plusName: 'Guest'
-            },
-            {
-                name: 'Séanin Steele',
-                plus: true,
-                plusName: 'Guest'
-            }
-        ]
 
         // The markup for the Step 1 UI
         return (
             <div className="form-group">
                 <label htmlFor="name">
                     <select id="name" required name="name" onChange={this.props.handleChange}>
-                        {guests.map((guest, index) => {
+                        {this.props.guests.map((guest, index) => {
                             return (<option key={index}>{guest.name}</option>);
                         })}
                     </select>

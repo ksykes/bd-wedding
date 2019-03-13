@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom'
 import Details from './components/Details'
 import Registry from './components/Registry'
 import RSVP from './components/RSVP'
@@ -14,21 +14,21 @@ class App extends Component {
               <nav>
                   <ul>
                       <li>
-                          <Link to='/details'>Details</Link>
+                          <NavLink activeClassName="is-active" to='/details'>Details</NavLink>
                       </li>
                       {/* <li>
-                          <Link to='/registry'>Registry</Link>
+                          <NavLink activeClassName="is-active" to='/registry'>Registry</NavLink>
                       </li> */}
                       <li>
-                          <Link to='/rsvp'>RSVP</Link>
+                          <NavLink activeClassName="is-active" to='/rsvp'>RSVP</NavLink>
                       </li>
                       {/* <li>
-                          <Link to='/shower'>Shower</Link>
+                          <NavLink activeClassName="is-active" to='/shower'>Shower</NavLink>
                       </li> */}
                   </ul>
               </nav>
               <header className="App-header">
-                <Link to="/">
+                <Link exact={true} to="/">
                   <h1>Brandie &amp; Dylan</h1>
                   <h2>Are Getting Married</h2>
                 </Link>
@@ -40,6 +40,7 @@ class App extends Component {
               {/* <Route path="/registry" component={Registry} /> */}
               <Route path='/rsvp' component={RSVP} />
               {/* <Route path='/shower' component={Shower} /> */}
+              <Route path='/thanks' component={Thanks} />
               <footer>
                   <p>©<script type="text/javascript">document.write(new Date().getFullYear());</script> 2019 <a href="https://kaitsykes.com">Kait Sykes</a> • Made with ♥️</p>
               </footer>

@@ -44,12 +44,19 @@ class RSVP extends Component {
         // if the current step is not 1, then render the "previous" button
         if(currentStep !==1) {
             return (
-                <button
-                    className="btn"
-                    type="button"
-                    onClick={this._prev}>
-                Previous
-                </button>
+                <div className="buttons">
+                    <button
+                        className="btn btn-prev"
+                        type="button"
+                        onClick={this._prev}>
+                    Previous
+                    </button>
+                    <button
+                        className="btn btn-submit"
+                        type="submit">
+                    Submit
+                    </button>
+                </div>
             )
         }
         // ...else return nothing
@@ -61,12 +68,14 @@ class RSVP extends Component {
         // if the current step is not 2, then render the "next" button
         if(currentStep <2) {
             return (
-                <button
-                    className="btn"
-                    type="button"
-                    onClick={this._next}>
-                    Next
-                </button>
+                <div className="buttons">
+                    <button
+                        className="btn btn-next"
+                        type="button"
+                        onClick={this._next}>
+                        Next
+                    </button>
+                </div>
             )
         }
         // ...else render nothing
@@ -95,6 +104,23 @@ class RSVP extends Component {
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
     render() {
+        // Guest list
+        const guests = [
+            {
+                name: '---Click to select your name:---'
+            },
+            {
+                name: 'Kait Sykes',
+                plus: true,
+                plusName: 'Guest'
+            },
+            {
+                name: 'Séanin Steele',
+                plus: true,
+                plusName: 'Guest'
+            }
+        ]
+
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>
@@ -103,6 +129,7 @@ class RSVP extends Component {
                     <Step1
                         currentStep={this.state.currentStep}
                         handleChange={this.handleChange}
+                        guests={guests}
                         name={this.state.name}
                         email={this.state.email}
                         address={this.state.address}
@@ -112,13 +139,13 @@ class RSVP extends Component {
                     <Step2
                         currentStep={this.state.currentStep}
                         handleChange={this.handleChange}
+                        guests={guests}
+                        guest={this.state.name}
                         plusOneName={this.state.plusOneName}
                         plusOneDinner={this.state.plusOneDinner}
                     />
-                    <div className="buttons">
-                        {this.previousButton}
-                        {this.nextButton}
-                    </div>
+                    {this.previousButton}
+                    {this.nextButton}
                 </form>
             </section>
         )
