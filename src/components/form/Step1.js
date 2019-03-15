@@ -1,10 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
+import Select from 'react-select'
 
 class Step1 extends Component {
+    state = {
+        selectedOption: null
+    }
+    handleChange = (selectedOption) => {
+        this.setState({ selectedOption })
+        console.log(`Option selected:`, selectedOption)
+    }
+
     render() {
         if (this.props.currentStep !== 1) { // Prop: The current step
             return null
         }
+
+        const { selectedOption } = this.state
+        const guests = this.props.guests
+        console.log(guests)
 
         // The markup for the Step 1 UI
         return (
@@ -15,6 +28,19 @@ class Step1 extends Component {
                             return (<option key={index}>{guest.name}</option>);
                         })}
                     </select>
+                    {/* <Select
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={
+                            this.props.guests.map((guest, index) => {
+                                return {
+                                    label: guest,
+                                    value: guest,
+                                    key: index
+                                }
+                            })
+                        }
+                    /> */}
                     Your full name
                 </label>
                 <label htmlFor="email">

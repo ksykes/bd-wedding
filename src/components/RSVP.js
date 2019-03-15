@@ -55,19 +55,12 @@ class RSVP extends Component {
         // if the current step is not 1, then render the "previous" button
         if(currentStep !==1) {
             return (
-                <div className="buttons">
-                    <button
-                        className="btn btn-prev"
-                        type="button"
-                        onClick={this._prev}>
-                    Previous
-                    </button>
-                    <button
-                        className="btn btn-submit"
-                        type="submit">
-                    Submit
-                    </button>
-                </div>
+                <button
+                    className="btn btn-prev"
+                    type="button"
+                    onClick={this._prev}>
+                Previous
+                </button>
             )
         }
         // ...else return nothing
@@ -77,7 +70,7 @@ class RSVP extends Component {
     get nextButton() {
         let currentStep = this.state.currentStep
         // if the current step is not 2, then render the "next" button
-        if(currentStep <2) {
+        if (currentStep < 2) {
             return (
                 <div className="buttons">
                     <button
@@ -85,6 +78,24 @@ class RSVP extends Component {
                         type="button"
                         onClick={this._next}>
                         Next
+                    </button>
+                </div>
+            )
+        }
+        // ...else render nothing
+        return null
+    }
+
+    get submitButton() {
+        let currentStep = this.state.currentStep
+        // if the current step is 2, then render the "submit" button
+        if (currentStep === 2) {
+            return (
+                <div className="buttons">
+                    <button
+                        className="btn btn-submit"
+                        type="submit">
+                        Submit
                     </button>
                 </div>
             )
@@ -103,9 +114,11 @@ class RSVP extends Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "rsvp", ...this.state })
+            body: encode({ "form-name": "rsvp", ...this.state }),
+            redirect: 'follow'
         })
-            .then(() => this.renderRedirect())
+            .then(() => console.log("Form successfully submitted"))
+            .then(() => <Redirect to='/rsvp/thanks' />)
             .catch(error => alert(error));
     
         e.preventDefault();
@@ -118,7 +131,7 @@ class RSVP extends Component {
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>
-                <form name="rsvp" onSubmit={this.handleSubmit}>
+                <form name="rsvp" action="/rsvp/thanks/" onSubmit={this.handleSubmit}>
                     {/* Render the form steps and pass in the required props */}
                     <Step1
                         currentStep={this.state.currentStep}
@@ -138,8 +151,11 @@ class RSVP extends Component {
                         plusOneName={this.state.plusOneName}
                         plusOneDinner={this.state.plusOneDinner}
                     />
-                    {this.previousButton}
-                    {this.nextButton}
+                    <div className="buttons">
+                        {this.previousButton}
+                        {this.nextButton}
+                        {this.submitButton}
+                    </div>
                 </form>
             </section>
         )
