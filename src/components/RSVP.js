@@ -72,14 +72,12 @@ class RSVP extends Component {
         // if the current step is not 2, then render the "next" button
         if (currentStep < 2) {
             return (
-                <div className="buttons">
-                    <button
-                        className="btn btn-next"
-                        type="button"
-                        onClick={this._next}>
-                        Next
-                    </button>
-                </div>
+                <button
+                    className="btn btn-next"
+                    type="button"
+                    onClick={this._next}>
+                    Next
+                </button>
             )
         }
         // ...else render nothing
@@ -91,13 +89,11 @@ class RSVP extends Component {
         // if the current step is 2, then render the "submit" button
         if (currentStep === 2) {
             return (
-                <div className="buttons">
-                    <button
-                        className="btn btn-submit"
-                        type="submit">
-                        Submit
-                    </button>
-                </div>
+                <button
+                    className="btn btn-submit"
+                    type="submit">
+                    Submit
+                </button>
             )
         }
         // ...else render nothing
