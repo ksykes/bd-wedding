@@ -16,17 +16,21 @@ class Step2 extends Component {
                 </label> */}
                 <fieldset>
                     <legend>Your plus one's dinner choice:</legend>
-                    <label htmlFor="plusOne">
-                        <input type="radio" id="plusOne" name="plusOneDinner" value="Option 1" onChange={this.props.handleChange} />
-                        Option 1
-                            </label>
-                    <label htmlFor="plusTwo">
-                        <input type="radio" id="plusTwo" name="plusOneDinner" value="Option 2" onChange={this.props.handleChange} />
-                        Option 2
-                            </label>
-                    <label htmlFor="plusThree">
-                        <input type="radio" id="plusThree" name="plusOneDinner" value="Option 3" onChange={this.props.handleChange} />
-                        Option 3
+                    <label htmlFor="dinnerOne">
+                        <input type="radio" id="dinnerOne" name="dinner" value="beef" onChange={this.props.handleChange} />
+                        Beef <span>GF</span>, AAA Prime Rib Roast
+                    </label>
+                    <label htmlFor="dinnerTwo">
+                        <input type="radio" id="dinnerTwo" name="dinner" value="salmon" onChange={this.props.handleChange} />
+                        Salmon <span>GF</span>, Kortright Maple Glaze
+                    </label>
+                    <label htmlFor="dinnerThree">
+                        <input type="radio" id="dinnerThree" name="dinner" value="chicken" onChange={this.props.handleChange} />
+                        Herb Roasted Chicken <span>GF</span>, Wild Mushroom and Marsala Sauce
+                    </label>
+                    <label htmlFor="dinnerFour">
+                        <input type="radio" id="dinnerFour" name="dinner" value="vegetarian" onChange={this.props.handleChange} />
+                        Vegetarian/Vegan, Eggplant Parmesan
                     </label>
                 </fieldset>
             </div>

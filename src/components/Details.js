@@ -19,6 +19,11 @@ class Details extends Component {
                 <p>9550 Pine Valley Dr</p>
                 <p>Woodbridge, ON L4L 1A6</p>
                 <p>(905) 832-2289</p>
+
+                <div className="dress">
+                    <p>Kortright Centre for Conservation is a natural landscape. You'll want to wear shoes appropriate for grass and cobblestone, or bring an extra pair.</p>
+                </div>
+
                 <div style={{ height: '5rem', width: '100%' }}>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: 'AIzaSyA04APN8FXCKz0EiAanW0g_3ranDy9DRZE' }}
