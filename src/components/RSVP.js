@@ -131,7 +131,7 @@ class RSVP extends Component {
 
         return (
             <section className="rsvpForm">
-                <h2>Please RSVP by April 1, 2015.</h2>
+                <h2>Please RSVP by July 19, 2019.</h2>
                 <form name="rsvp" action="/rsvp/thanks/" onSubmit={this.handleSubmit}>
                     {/* Render the form steps and pass in the required props */}
                     <Step1
