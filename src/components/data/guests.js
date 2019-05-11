@@ -1,14 +1,15 @@
 const guests = [
     {
-        name: '---Click to select your name:---'
-    },
-    {
-        name: 'Kait Sykes',
+        value: 'Kait Sykes',
+        label: 'Kait Sykes',
+        name: 'name',
         plus: true,
         plusName: 'Guest'
     },
     {
-        name: 'Séanin Steele',
+        value: 'Séanin Steele',
+        label: 'Séanin Steele',
+        name: 'name',
         plus: true,
         plusName: 'Guest'
     },

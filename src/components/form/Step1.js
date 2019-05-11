@@ -1,46 +1,29 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
+import Animated from 'react-select/lib/animated'
 
 class Step1 extends Component {
-    state = {
-        selectedOption: null
-    }
-    handleChange = (selectedOption) => {
-        this.setState({ selectedOption })
-        console.log(`Option selected:`, selectedOption)
-    }
-
     render() {
         if (this.props.currentStep !== 1) { // Prop: The current step
             return null
         }
 
-        const { selectedOption } = this.state
         const guests = this.props.guests
-        console.log(guests)
 
         // The markup for the Step 1 UI
         return (
             <div className="form-group">
                 <label htmlFor="name">
-                    <select id="name" required name="name" onChange={this.props.handleChange}>
-                        {this.props.guests.map((guest, index) => {
-                            return (<option key={index}>{guest.name}</option>);
-                        })}
-                    </select>
-                    {/* <Select
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options={
-                            this.props.guests.map((guest, index) => {
-                                return {
-                                    label: guest,
-                                    value: guest,
-                                    key: index
-                                }
-                            })
-                        }
-                    /> */}
+                    <Select
+                        value={guests.value}
+                        onChange={this.props.handleNameChange}
+                        id="name"
+                        name="name"
+                        options={guests}
+                        closeMenuOnSelect={true}
+                        backspaceRemovesValue={true}
+                        placeholder={"---Click to select your name:---"}
+                    />
                     Your full name
                 </label>
                 <label htmlFor="email">
@@ -81,6 +64,10 @@ class Step1 extends Component {
                         Vegetarian/Vegan, Eggplant Parmesan
                     </label>
                 </fieldset>
+                <label htmlFor="restrictions">
+                    Do you have any dietary restrictions?
+                    <textarea name="restrictions" value={this.props.restrictions} onChange={this.props.handleChange} required></textarea>
+                </label>
             </div>
         )
     }

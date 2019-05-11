@@ -14,18 +14,19 @@ class RSVP extends Component {
     constructor(props) {
         super(props);
         // Set the initial input values
-        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", plusOneName: "", plusOneDinner: "" };
+        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", restrictions: "", plusOneName: "", plusOneDinner: "", plusOneRestrictions: "", reroute: false };
         // Bind new functions for next and previous
         this._next = this._next.bind(this)
         this._prev = this._prev.bind(this)
+        this.handleNameChange = this.handleNameChange.bind(this)
     }
 
     // Update plus one name in state
     updateGuestInfo() {
-        const plusOne = guests.findIndex(x => x.name === this.state.name)
-        const guest = guests[plusOne].plusName
+        const data = guests.find(guest => guest.value === this.state.name)
         this.setState({
-            plusOneName: guest
+            plusOne: data.plus,
+            plusOneName: data.plusName
         })
     }
 
@@ -100,11 +101,6 @@ class RSVP extends Component {
         return null
     }
 
-    // Redirect to "thanks" page on form submission
-    renderRedirect = () => {
-        return <Redirect to='/rsvp/thanks' />
-    }
-
     // Handle form submission
     handleSubmit = e => {
         fetch("/", {
@@ -114,16 +110,25 @@ class RSVP extends Component {
             redirect: 'follow'
         })
             .then(() => console.log("Form successfully submitted"))
-            .then(() => <Redirect to='/rsvp/thanks' />)
+            .then(() => this.setState(() => ({
+                reroute: true
+            })))
             .catch(error => alert(error));
-    
+
         e.preventDefault();
     }
 
     // Handle change to inputs
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
+    // Handle change to names
+    handleNameChange = e => this.setState({ [e.name]: e.value })
+
     render() {
+        if (this.state.reroute === true) {
+            return <Redirect to='/rsvp/thanks' />
+        }
+
         return (
             <section className="rsvpForm">
                 <h2>Please RSVP by April 1, 2015.</h2>
@@ -132,12 +137,14 @@ class RSVP extends Component {
                     <Step1
                         currentStep={this.state.currentStep}
                         handleChange={this.handleChange}
+                        handleNameChange={this.handleNameChange}
                         guests={guests}
                         name={this.state.name}
                         email={this.state.email}
                         address={this.state.address}
                         rsvp={this.state.rsvp}
                         dinner={this.state.dinner}
+                        restrictions={this.state.restrictions}
                     />
                     <Step2
                         currentStep={this.state.currentStep}
@@ -146,6 +153,7 @@ class RSVP extends Component {
                         guest={this.state.name}
                         plusOneName={this.state.plusOneName}
                         plusOneDinner={this.state.plusOneDinner}
+                        plusOneRestrictions={this.state.plusOneRestrictions}
                     />
                     <div className="buttons">
                         {this.previousButton}
