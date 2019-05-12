@@ -9,6 +9,7 @@ class Step1 extends Component {
         }
 
         const guests = this.props.guests
+        // console.log(guests)
 
         // The markup for the Step 1 UI
         return (

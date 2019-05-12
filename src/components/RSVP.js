@@ -4,6 +4,7 @@ import Step1 from './form/Step1'
 import Step2 from './form/Step2'
 import guests from './data/guests'
 
+// Does something for the form
 const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -14,7 +15,7 @@ class RSVP extends Component {
     constructor(props) {
         super(props);
         // Set the initial input values
-        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", restrictions: "", plusOneName: "", plusOneDinner: "", plusOneRestrictions: "", reroute: false };
+        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", restrictions: "", plus: "", plusOneName: "", plusOneDinner: "", plusOneRestrictions: "", reroute: false };
         // Bind new functions for next and previous
         this._next = this._next.bind(this)
         this._prev = this._prev.bind(this)
@@ -70,8 +71,8 @@ class RSVP extends Component {
 
     get nextButton() {
         let currentStep = this.state.currentStep
-        // if the current step is not 2, then render the "next" button
-        if (currentStep < 2) {
+        // if the current step is not 2 and plus one is true, then render the "next" button
+        if (currentStep < 2 && this.state.plus === true) {
             return (
                 <button
                     className="btn btn-next"
@@ -87,8 +88,8 @@ class RSVP extends Component {
 
     get submitButton() {
         let currentStep = this.state.currentStep
-        // if the current step is 2, then render the "submit" button
-        if (currentStep === 2) {
+        // if the current step is 2 or plus one is false, then render the "submit" button
+        if (currentStep === 2 | this.state.plus === false) {
             return (
                 <button
                     className="btn btn-submit"
@@ -122,7 +123,7 @@ class RSVP extends Component {
     handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
     // Handle change to names
-    handleNameChange = e => this.setState({ [e.name]: e.value })
+    handleNameChange = e => this.setState({ [e.name]: e.value, plus: e.plus })
 
     render() {
         if (this.state.reroute === true) {

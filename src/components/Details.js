@@ -1,16 +1,6 @@
 import React, { Component } from 'react'
-import GoogleMapReact from 'google-map-react'
-
-const MapComponent = ({ text }) => <div>{text}</div>;
 
 class Details extends Component {
-    static defaultProps = {
-        center: {
-            lat: 43.8305,
-            lng: -79.5900
-        },
-        zoom: 14
-    };
     render() {
         return (
             <section className="details">
@@ -20,24 +10,14 @@ class Details extends Component {
                 <p>Woodbridge, ON L4L 1A6</p>
                 <p>(905) 832-2289</p>
 
-                <div className="dress">
-                    <p>Kortright Centre for Conservation is a natural landscape. You'll want to wear shoes appropriate for grass and cobblestone, or bring an extra pair.</p>
-                </div>
+                <p>Kortright Centre for Conservation is a natural landscape. You'll want to wear shoes appropriate for grass and cobblestone, or bring an extra pair.</p>
 
-                <div style={{ height: '15rem', width: '100%' }}>
-                    <GoogleMapReact
-                        bootstrapURLKeys={{ key: 'AIzaSyA04APN8FXCKz0EiAanW0g_3ranDy9DRZE' }}
-                        yesIWantToUseGoogleMapApiInternals
-                        defaultCenter={this.props.center}
-                        defaultZoom={this.props.zoom}
-                    >
-                        <MapComponent
-                            lat={43.8305}
-                            lng={-79.5900}
-                            text={'Kortright Conservation Centre'}
-                        />
-                    </GoogleMapReact>
-                </div>
+                <h4><a href="https://www.accorhotels.com/gb/hotel-7157-novotel-toronto-vaughan/index.shtml">Hotel Novotel</a> <span><a href="https://www.google.com/maps/place/Hotel+Novotel+Toronto+Vaughan/@43.8212885,-79.540632,17z/data=!3m1!4b1!4m5!3m4!1s0x882b2f6b3da807b9:0xdbe22d9fce86790f!8m2!3d43.8212885!4d-79.5384433">(directions)</a></span></h4>
+                <p>200 Bass Pro Mills Dr</p>
+                <p>Concord, ON L4L 1A6</p>
+                <p>(905) 660-0212</p>
+                <p>Should you wish to stay in Woodbridge the evening of the wedding, we have booked a block of hotel rooms at the Hotel Novotel, where Dylan and Brandie will be staying. It is 7 km from the venue.</p>
+                <p>Rooms are pro-rated at $169 per night, but you must call and request to book under the Kirk & Cranstone Wedding Block ID 500619 to get this discount. There are rooms with 1 King bed or 2 Queen beds. They will take your credit card number to reserve the booking, but you won't be charged until check in.</p>
             </section>
         )
     }

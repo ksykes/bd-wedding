@@ -3,45 +3,53 @@ const guests = [
         value: 'Kait Sykes',
         label: 'Kait Sykes',
         name: 'name',
-        plus: true,
-        plusName: 'Guest'
+        plus: false
     },
     {
         value: 'Séanin Steele',
         label: 'Séanin Steele',
         name: 'name',
-        plus: true,
-        plusName: 'Guest'
+        plus: false
     },
     {
-        name: 'Karchiri Clack',
+        value: 'Karchiri Clack',
+        label: 'Karchiri Clack',
+        name: 'name',
         plus: true,
         plusName: 'Patrick Diep'
     },
     {
-        name: 'Carleigh Roughley',
+        value: 'Carleigh Roughley',
+        label: 'Carleigh Roughley',
+        name: 'name',
         plus: true,
         plusName: 'Jon Roughley'
     },
     {
-        name: 'Sydney Cranstone',
+        value: 'Sydney Cranstone',
+        label: 'Sydney Cranstone',
+        name: 'name',
         plus: true,
         plusName: 'Kevin Voros'
     },
     {
-        name: 'Eric Kirk',
+        value: 'Eric Kirk',
+        label: 'Eric Kirk',
+        name: 'name',
         plus: true,
         plusName: 'Emily Gagovski'
     },
     {
-        name: 'Brodey Blair',
-        plus: true,
-        plusName: 'Guest'
+        value: 'Brodey Blair',
+        label: 'Brodey Blair',
+        name: 'name',
+        plus: false
     },
     {
-        name: 'Grant Wever',
-        plus: true,
-        plusName: 'Guest'
+        value: 'Grant Wever',
+        label: 'Grant Wever',
+        name: 'name',
+        plus: false
     },
     {
         name: 'Mike Pennington',

@@ -10,10 +10,6 @@ class Step2 extends Component {
             // The markup for the Step 2 UI
             <div className="form-group">
                 <h3>{this.props.plusOneName}</h3>
-                {/* <label htmlFor="plusOneName">
-                    <input type="text" name="plusOneName" value={this.props.plusOneName} onChange={this.props.handleChange} />
-                    Your plus one's name
-                </label> */}
                 <fieldset>
                     <legend>Your plus one's dinner choice:</legend>
                     <label htmlFor="dinnerOne">
