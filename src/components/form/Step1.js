@@ -48,27 +48,37 @@ class Step1 extends Component {
                 </fieldset>
                 <fieldset>
                     <legend>Dinner choice:</legend>
-                    <label htmlFor="dinnerOne">
-                        <input type="radio" id="dinnerOne" name="dinner" value="beef" onChange={this.props.handleChange} />
-                        Beef <span>GF</span>, AAA Prime Rib Roast
-                    </label>
-                    <label htmlFor="dinnerTwo">
-                        <input type="radio" id="dinnerTwo" name="dinner" value="salmon" onChange={this.props.handleChange} />
-                        Salmon <span>GF</span>, Kortright Maple Glaze
-                    </label>
-                    <label htmlFor="dinnerThree">
-                        <input type="radio" id="dinnerThree" name="dinner" value="chicken" onChange={this.props.handleChange} />
-                        Herb Roasted Chicken <span>GF</span>, Wild Mushroom and Marsala Sauce
-                    </label>
-                    <label htmlFor="dinnerFour">
-                        <input type="radio" id="dinnerFour" name="dinner" value="vegetarian" onChange={this.props.handleChange} />
-                        Vegetarian/Vegan, Eggplant Parmesan
+                    <div className="dinnerChoices">
+                        <label htmlFor="dinnerOne">
+                            <input type="radio" id="dinnerOne" name="dinner" value="beef" onChange={this.props.handleChange} />
+                            AAA Prime Rib Roast <span class="mice">(Gluten Free)</span>
+                        </label>
+                    </div>
+                    <div className="dinnerChoices">
+                        <label htmlFor="dinnerTwo">
+                            <input type="radio" id="dinnerTwo" name="dinner" value="salmon" onChange={this.props.handleChange} />
+                            Kortright Maple Glaze Salmon <span class="mice">(Gluten Free)</span>
+                        </label>
+                    </div>
+                    <div className="dinnerChoices">
+                        <label htmlFor="dinnerThree">
+                            <input type="radio" id="dinnerThree" name="dinner" value="chicken" onChange={this.props.handleChange} />
+                            Herb Roasted Chicken with Wild Mushroom and Marsala Sauce <span class="mice">(Gluten Free)</span>
+                        </label>
+                    </div>
+                    <div className="dinnerChoices">
+                        <label htmlFor="dinnerFour">
+                            <input type="radio" id="dinnerFour" name="dinner" value="vegetarian" onChange={this.props.handleChange} />
+                            Eggplant Parmesan <span class="mice">(Vegetarian/Vegan)</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="restrictions">
+                    <label htmlFor="restrictions">
+                        Do you have any dietary restrictions?
+                        <textarea name="restrictions" value={this.props.restrictions} onChange={this.props.handleChange} required></textarea>
                     </label>
                 </fieldset>
-                <label htmlFor="restrictions">
-                    Do you have any dietary restrictions?
-                    <textarea name="restrictions" value={this.props.restrictions} onChange={this.props.handleChange} required></textarea>
-                </label>
             </div>
         )
     }
