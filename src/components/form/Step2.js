@@ -40,7 +40,7 @@ class Step2 extends Component {
                 <fieldset class="restrictions">
                     <label htmlFor="plusOneRestrictions">
                         Does your guest have any dietary restrictions?
-                        <textarea name="plusOneRestrictions" value={this.props.plusOneRestrictions} onChange={this.props.handleChange} required></textarea>
+                        <textarea name="plusOneRestrictions" value={this.props.plusOneRestrictions} onChange={this.props.handleChange}></textarea>
                     </label>
                 </fieldset>
             </div>
