@@ -23,7 +23,7 @@ class Step1 extends Component {
                         options={guests}
                         closeMenuOnSelect={true}
                         backspaceRemovesValue={true}
-                        placeholder={"---Click to select your name:---"}
+                        placeholder={"Click and start typing to select your name:"}
                     />
                     Your full name
                 </label>
@@ -37,14 +37,18 @@ class Step1 extends Component {
                 </label>
                 <fieldset>
                     <legend>RSVP:</legend>
-                    <label htmlFor="RSVPyes">
-                        <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.props.handleChange} />
-                        Accepts with pleasure
-                    </label>
-                    <label htmlFor="RSVPno">
-                        <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.props.handleChange} />
-                        Denies with regret
-                    </label>
+                    <div className="rsvpChoices">
+                        <label htmlFor="RSVPyes">
+                            <input type="radio" id="RSVPyes" name="rsvp" value="Yes" onChange={this.props.handleChange} />
+                            Accepts with pleasure
+                        </label>
+                    </div>
+                    <div className="rsvpChoices">
+                        <label htmlFor="RSVPno">
+                            <input type="radio" id="RSVPno" name="rsvp" value="No" onChange={this.props.handleChange} />
+                            Denies with regret
+                        </label>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Dinner choice:</legend>

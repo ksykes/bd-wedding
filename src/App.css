@@ -21,16 +21,25 @@ body {
         rgba(108, 70, 78, 0.45)
         ),
         url(images/hero.jpg);
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
+    background-size: auto 100%;
+    background-attachment: fixed;
     font-family: 'Lato', sans-serif;
+}
+
+div#root section {
     font-size: 1.1rem;
-    line-height: 1.25rem;
+    line-height: 1.45rem;
 }
 
 span.mice {
     font-size: 0.8rem;
     margin-left: 0.75rem;
+}
+
+span.break {
+    white-space: nowrap;
 }
 
 /* HEADER */
@@ -105,8 +114,75 @@ section {
     width: 75%;
 }
 
+/* DETAILS */
+
+section.details h3 {
+    font-size: 1.5rem;
+}
+
+section.details h4 {
+    font-weight: bold;
+    font-size:  1.3rem;
+}
+
+section.details div {
+    position: relative;
+    margin-top: 3rem;
+}
+
+section.details h4::before {
+    content: '';
+    border-bottom: 2px solid rgb(108, 70, 78);
+    width: 75px;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+section.details h4 a {
+    color: rgb(108, 70, 78);
+    text-decoration: none;
+}
+
+section.details p.body {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+/* BBQ */
+
+section.bbq h3 {
+    font-size: 1.5rem;
+}
+
+section.bbq h4 {
+    font-weight: bold;
+    font-size:  1.3rem;
+}
+
+section.bbq a {
+    color: rgb(108, 70, 78);
+    text-decoration: none;
+}
+
+section.bbq p.body {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+/* RSVP */
+
 section.rsvpForm form {
     text-align: left;
+}
+
+section.rsvpForm form div.css-10nd86i {
+    width: 100%;
+    /* padding: 1rem 0rem; */
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1rem;
 }
 
 section.rsvpForm form input,
@@ -200,6 +276,7 @@ section.rsvpForm form p {
     margin-bottom: 1.5rem;
 }
 
+section.rsvpForm div.rsvpChoices,
 section.rsvpForm div.dinnerChoices {
     width: 100%;
 }
