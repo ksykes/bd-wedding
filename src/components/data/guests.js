@@ -414,6 +414,315 @@ const guests = [
         label: 'Jeremy James',
         name: 'name',
         plus: false
+    },
+    // GUESTS REVERSED SO USERS CAN LOOK UP BY PLUS ONE NAME
+    {
+        value: 'Patrick Diep',
+        label: 'Patrick Diep',
+        name: 'name',
+        plus: true,
+        plusName: 'Karchiri Clack'
+    },
+    {
+        value: 'Jon Roughley',
+        label: 'Jon Roughley',
+        name: 'name',
+        plus: true,
+        plusName: 'Carleigh Roughley'
+    },
+    {
+        value: 'Kevin Voros',
+        label: 'Kevin Voros',
+        name: 'name',
+        plus: true,
+        plusName: 'Sydney Cranstone'
+    },
+    {
+        value: 'Emily Gagovski',
+        label: 'Eric Kirk',
+        name: 'name',
+        plus: true,
+        plusName: 'Eric Kirk'
+    },
+    {
+        value: 'Laura Jay',
+        label: 'Laura Jay',
+        name: 'name',
+        plus: true,
+        plusName: 'Mike Pennington'
+    },
+    {
+        value: 'Tiana Ferinac',
+        label: 'Tiana Ferinac',
+        name: 'name',
+        plus: true,
+        plusName: 'Patrick Torrens'
+    },
+    {
+        value: 'Kelly Kirk',
+        label: 'Kelly Kirk',
+        name: 'name',
+        plus: true,
+        plusName: 'Brett Kirk'
+    },
+    {
+        value: 'Lora Grey',
+        label: 'Lora Grey',
+        name: 'name',
+        plus: true,
+        plusName: 'Steve Christian'
+    },
+    {
+        value: 'Jaclyn Patterson',
+        label: 'Jaclyn Patterson',
+        name: 'name',
+        plus: true,
+        plusName: 'Matt Kenyon'
+    },
+    {
+        value: 'Chris Taylor',
+        label: 'Chris Taylo',
+        name: 'name',
+        plus: true,
+        plusName: 'Paige Taylor'
+    },
+    {
+        value: 'Jay Bennett',
+        label: 'Jay Bennettn',
+        name: 'name',
+        plus: true,
+        plusName: 'Sam Kenyon'
+    },
+    {
+        value: 'Casey McKay',
+        label: 'Casey McKay',
+        name: 'name',
+        plus: true,
+        plusName: 'Jake Lewis'
+    },
+    {
+        value: 'Brad Lewis',
+        label: 'Brad Lewis',
+        name: 'name',
+        plus: true,
+        plusName: 'Robin Lewis'
+    },
+    {
+        value: 'Tony Hale',
+        label: 'Tony Hale',
+        name: 'name',
+        plus: true,
+        plusName: 'Laura Kenyon'
+    },
+    {
+        value: 'Barb Kaluza',
+        label: 'Barb Kaluza',
+        name: 'name',
+        plus: true,
+        plusName: 'Gary Garrett'
+    },
+    {
+        value: 'Donna Newton',
+        label: 'Donna Newton',
+        name: 'name',
+        plus: true,
+        plusName: 'Al Newton'
+    },
+    {
+        value: 'Lesley Garrett',
+        label: 'Lesley Garrett',
+        name: 'name',
+        plus: true,
+        plusName: 'Chris Garrett'
+    },
+    {
+        value: 'Jenn Noel',
+        label: 'Jenn Noel',
+        name: 'name',
+        plus: true,
+        plusName: 'Grant Garrett'
+    },
+    {
+        value: 'Mimi Wilde',
+        label: 'Mimi Wilde',
+        name: 'name',
+        plus: true,
+        plusName: 'Craig Kee'
+    },
+    {
+        value: 'Jill Kee',
+        label: 'Jill Kee',
+        name: 'name',
+        plus: true,
+        plusName: 'Rory Kee'
+    },
+    {
+        value: 'Catherine Snider',
+        label: 'Catherine Snider',
+        name: 'name',
+        plus: true,
+        plusName: 'Connor Kee'
+    },
+    {
+        value: 'Kristin Turner',
+        label: 'Kristin Turner',
+        name: 'name',
+        plus: true,
+        plusName: 'Spencer Garrett'
+    },
+    {
+        value: 'Sharon Cranstone',
+        label: 'Sharon Cranstone',
+        name: 'name',
+        plus: true,
+        plusName: 'Brian Cranstone'
+    },
+    {
+        value: 'Jenny Cranstone',
+        label: 'Jenny Cranstone',
+        name: 'name',
+        plus: true,
+        plusName: 'Jay Cranstone'
+    },
+    {
+        value: 'Shawn Gallant',
+        label: 'Shawn Gallant',
+        name: 'name',
+        plus: true,
+        plusName: 'Evan Cranstone'
+    },
+    {
+        value: 'Pat Cranstone',
+        label: 'Pat Cranstone',
+        name: 'name',
+        plus: true,
+        plusName: 'Dave Cranstone'
+    },
+    {
+        value: 'Paul Charbonneau',
+        label: 'Paul Charbonneau',
+        name: 'name',
+        plus: true,
+        plusName: 'Lynda Charbonneau'
+    },
+    {
+        value: 'Gwen McArthur',
+        label: 'Gwen McArthur',
+        name: 'name',
+        plus: true,
+        plusName: 'George McArthur'
+    },
+    {
+        value: 'David Graham',
+        label: 'David Graham',
+        name: 'name',
+        plus: true,
+        plusName: 'Kim Graham'
+    },
+    {
+        value: 'Steve McArthur',
+        label: 'Steve McArthur',
+        name: 'name',
+        plus: true,
+        plusName: 'Shari McArthur'
+    },
+    {
+        value: 'Natalie Graham',
+        label: 'Natalie Graham',
+        name: 'name',
+        plus: true,
+        plusName: 'Jeff Graham'
+    },
+    {
+        value: 'Meagan Puterman',
+        label: 'Meagan Puterman',
+        name: 'name',
+        plus: true,
+        plusName: 'Scott Graham'
+    },
+    {
+        value: 'Ryan Kirley',
+        label: 'Ryan Kirley',
+        name: 'name',
+        plus: true,
+        plusName: 'Kaitlin McArthur'
+    },
+    {
+        value: 'Donna Burdzy',
+        label: 'Donna Burdzy',
+        name: 'name',
+        plus: true,
+        plusName: 'Rick Burdzy'
+    },
+    {
+        value: 'Kristine Burdzy',
+        label: 'Kristine Burdzy',
+        name: 'name',
+        plus: true,
+        plusName: 'Jeff Burdzy'
+    },
+    {
+        value: 'Tracey Kipin',
+        label: 'Tracey Kipin',
+        name: 'name',
+        plus: true,
+        plusName: 'Richard Kipin'
+    },
+    {
+        value: 'Danielle Charron',
+        label: 'Danielle Charron',
+        name: 'name',
+        plus: true,
+        plusName: 'Noah Kipin'
+    },
+    {
+        value: 'Melanie Frappier',
+        label: 'Melanie Frappier',
+        name: 'name',
+        plus: true,
+        plusName: 'Graeme Hamilton'
+    },
+    {
+        value: 'Jodi Bobechko',
+        label: 'Jodi Bobechko',
+        name: 'name',
+        plus: true,
+        plusName: 'Shannon Tonkin'
+    },
+    {
+        value: 'Jackie Borrie',
+        label: 'Jackie Borrie',
+        name: 'name',
+        plus: true,
+        plusName: 'Bruce Borrie'
+    },
+    {
+        value: 'Susan Hamilton',
+        label: 'Susan Hamilton',
+        name: 'name',
+        plus: true,
+        plusName: 'Charles Hamilton'
+    },
+    {
+        value: 'Sue Koeltz',
+        label: 'Sue Koeltz',
+        name: 'name',
+        plus: true,
+        plusName: 'Tom Koeltz'
+    },
+    {
+        value: 'Darlene Jeremic',
+        label: 'Darlene Jeremic',
+        name: 'name',
+        plus: true,
+        plusName: 'John Jeremic'
+    },
+    {
+        value: 'Drew Ayotte',
+        label: 'Drew Ayotte',
+        name: 'name',
+        plus: true,
+        plusName: 'Kyle Van de Valk'
     }
 ]
 

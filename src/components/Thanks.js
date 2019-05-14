@@ -6,8 +6,7 @@ class Thanks extends Component {
         return (
             <section className="thanks">
                 <h3>Thanks!</h3>
-                <p>Your RSVP has been submitted.</p>
-                <p>See you on August 23!</p>
+                <p>Your response has been submitted.</p>
             </section>
         )
     }

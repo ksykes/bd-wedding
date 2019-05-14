@@ -191,7 +191,7 @@ section.rsvpForm form div.css-10nd86i {
 section.rsvpForm form input,
 section.rsvpForm form textarea {
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0rem;
     margin: 2rem 0 0.5rem 0;
     border: 1px solid #ccc;
     border-radius: 2px;
@@ -316,7 +316,7 @@ section.rsvpForm form button:hover {
     transition: all 0.25s ease-in;
 }
 
-section.rsvpForm form button.btn-next {
+section.rsvpForm form button.btn-center {
     margin: 0 auto;
 }
 

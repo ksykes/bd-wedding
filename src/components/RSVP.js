@@ -22,6 +22,13 @@ class RSVP extends Component {
         this.handleNameChange = this.handleNameChange.bind(this)
     }
 
+    // Alphabetize guest list
+    alphabetize() {
+        // From: https://css-tricks.com/snippets/javascript/alphabetizing-arrays-objects-and-arrays-of-objects/
+        const propComparator = (propName) => (a, b) => a[propName].toLowerCase() == b[propName].toLowerCase() ? 0 : a[propName].toLowerCase() < b[propName].toLowerCase() ? -1 : 1
+        guests.sort(propComparator(`value`));
+    }
+
     // Update plus one name in state
     updateGuestInfo() {
         const data = guests.find(guest => guest.value === this.state.name)
@@ -75,7 +82,7 @@ class RSVP extends Component {
         if (currentStep < 2 && this.state.plus === true) {
             return (
                 <button
-                    className="btn btn-next"
+                    className="btn btn-next btn-center"
                     type="button"
                     onClick={this._next}>
                     Next
@@ -92,7 +99,8 @@ class RSVP extends Component {
         if (currentStep === 2 | this.state.plus === false) {
             return (
                 <button
-                    className="btn btn-submit"
+                    // If this.state.plus = true don't add a class, if this.state.plus = false, add centering class
+                    className={"btn btn-submit " + (this.state.plus ? '' : 'btn-center')}
                     type="submit">
                     Submit
                 </button>
@@ -126,6 +134,8 @@ class RSVP extends Component {
     handleNameChange = e => this.setState({ [e.name]: e.value, plus: e.plus })
 
     render() {
+        this.alphabetize()
+
         if (this.state.reroute === true) {
             return <Redirect to='/rsvp/thanks' />
         }
