@@ -439,7 +439,7 @@ const guests = [
     },
     {
         value: 'Emily Gagovski',
-        label: 'Eric Kirk',
+        label: 'Emily Gagovski',
         name: 'name',
         plus: true,
         plusName: 'Eric Kirk'

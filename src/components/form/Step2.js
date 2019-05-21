@@ -11,7 +11,7 @@ class Step2 extends Component {
             <div className="form-group">
                 <h3>{this.props.plusOneName}</h3>
                 <fieldset>
-                    <legend>Your guest's dinner choice:</legend>
+                    <legend>{this.props.plusOneName}'s dinner choice:</legend>
                     <div className="dinnerChoices">
                         <label htmlFor="dinnerOne">
                             <input type="radio" id="dinnerOne" name="dinner" value="beef" onChange={this.props.handleChange} />
@@ -39,7 +39,7 @@ class Step2 extends Component {
                 </fieldset>
                 <fieldset class="restrictions">
                     <label htmlFor="plusOneRestrictions">
-                        Does your guest have any dietary restrictions or allergies?
+                        Does {this.props.plusOneName} have any dietary restrictions or allergies?
                         <textarea name="plusOneRestrictions" value={this.props.plusOneRestrictions} onChange={this.props.handleChange}></textarea>
                     </label>
                 </fieldset>
