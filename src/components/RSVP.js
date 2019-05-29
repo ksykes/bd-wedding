@@ -80,6 +80,7 @@ class RSVP extends Component {
         let currentStep = this.state.currentStep
         // if the current step is not 2 and plus one is true, then render the "next" button
         if (currentStep < 2 && this.state.plus === true) {
+            console.log(this.state)
             return (
                 <button
                     className="btn btn-next btn-center"

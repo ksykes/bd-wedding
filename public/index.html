@@ -31,6 +31,12 @@
         <input type="radio" id="two" name="dinner" />
         <input type="radio" id="three" name="dinner" />
       </fieldset>
+      <fieldset className="restrictions">
+        <label htmlFor="restrictions">
+          Do you have any dietary restrictions or allergies?
+          <textarea name="restrictions" value={this.props.restrictions} onChange={this.props.handleChange}></textarea>
+        </label>
+      </fieldset>
       <hr />
       <p>If you don't have a plus one, leave this section blank...</p>
       <legend>Plus One</legend>
@@ -40,6 +46,13 @@
         <input type="radio" id="one" name="plusOneDinner" />
         <input type="radio" id="two" name="plusOneDinner" />
         <input type="radio" id="three" name="plusOneDinner" />
+      </fieldset>
+      <fieldset class="restrictions">
+        <label htmlFor="plusOneRestrictions">
+          Does your guest have any dietary restrictions or allergies?
+          <textarea name="plusOneRestrictions" value={this.props.plusOneRestrictions}
+            onChange={this.props.handleChange}></textarea>
+        </label>
       </fieldset>
       <button type="submit">Submit</button>
     </form>

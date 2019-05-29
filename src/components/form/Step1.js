@@ -72,7 +72,7 @@ class Step1 extends Component {
                     <div className="dinnerChoices">
                         <label htmlFor="dinnerFour">
                             <input type="radio" id="dinnerFour" name="dinner" value="vegetarian" onChange={this.props.handleChange} />
-                            Eggplant Parmesan <span className="mice">(Vegetarian/Vegan)</span>
+                            Eggplant Parmesan <span className="mice">(Vegetarian)</span>
                         </label>
                     </div>
                 </fieldset>

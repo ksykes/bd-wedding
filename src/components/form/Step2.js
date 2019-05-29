@@ -33,11 +33,11 @@ class Step2 extends Component {
                     <div className="dinnerChoices">
                         <label htmlFor="dinnerFour">
                             <input type="radio" id="dinnerFour" name="plusOneDinner" value="vegetarian" onChange={this.props.handleChange} />
-                            Eggplant Parmesan <span class="mice">(Vegetarian/Vegan)</span>
+                            Eggplant Parmesan <span class="mice">(Vegetarian)</span>
                         </label>
                     </div>
                 </fieldset>
-                <fieldset class="restrictions">
+                <fieldset className="restrictions">
                     <label htmlFor="plusOneRestrictions">
                         Does {this.props.plusOneName} have any dietary restrictions or allergies?
                         <textarea name="plusOneRestrictions" value={this.props.plusOneRestrictions} onChange={this.props.handleChange}></textarea>
