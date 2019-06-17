@@ -273,7 +273,7 @@ const guests = [
         label: 'Shari McArthur',
         name: 'name',
         plus: true,
-        plusName: 'Steve McArthur'
+        plusName: 'Steve Adair'
     },
     {
         value: 'Jeff Graham',
@@ -290,8 +290,8 @@ const guests = [
         plusName: 'Meagan Puterman'
     },
     {
-        value: 'Kaitlin McArthur',
-        label: 'Kaitlin McArthur',
+        value: 'Kaitlin Adair',
+        label: 'Kaitlin Adair',
         name: 'name',
         plus: true,
         plusName: 'Ryan Kirley'
@@ -620,8 +620,8 @@ const guests = [
         plusName: 'Kim Graham'
     },
     {
-        value: 'Steve McArthur',
-        label: 'Steve McArthur',
+        value: 'Steve Adair',
+        label: 'Steve Adair',
         name: 'name',
         plus: true,
         plusName: 'Shari McArthur'
@@ -645,7 +645,7 @@ const guests = [
         label: 'Ryan Kirley',
         name: 'name',
         plus: true,
-        plusName: 'Kaitlin McArthur'
+        plusName: 'Kaitlin Adair'
     },
     {
         value: 'Donna Burdzy',
