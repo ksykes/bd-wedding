@@ -359,7 +359,15 @@ const guests = [
         value: 'Cam Brennan',
         label: 'Cam Brennan',
         name: 'name',
-        plus: false
+        plus: true,
+        plusName: 'Emma Bard'
+    },
+    {
+        value: 'Emma Bard',
+        label: 'Emma Bard',
+        name: 'name',
+        plus: true,
+        plusName: 'Cam Brennan'
     },
     {
         value: 'Brett Torrens',
