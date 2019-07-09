@@ -731,6 +731,54 @@ const guests = [
         name: 'name',
         plus: true,
         plusName: 'Kyle Van de Valk'
+    },
+    {
+        value: 'David Kirk',
+        label: 'David Kirk',
+        name: 'name',
+        plus: true,
+        plusName: 'Janis Kirk'
+    },
+    {
+        value: 'Janis Kirk',
+        label: 'Janis Kirk',
+        name: 'name',
+        plus: true,
+        plusName: 'David Kirk'
+    },
+    {
+        value: 'Barb Malyon',
+        label: 'Barb Malyon',
+        name: 'name',
+        plus: false
+    },
+    {
+        value: 'Dan Armstrong',
+        label: 'Dan Armstrong',
+        name: 'name',
+        plus: true,
+        plusName: 'Marilyn Armstrong'
+    },
+    {
+        value: 'Marilyn Armstrong',
+        label: 'Marilyn Armstrong',
+        name: 'name',
+        plus: true,
+        plusName: 'Dan Armstrong'
+    },
+    {
+        value: 'Al Forrest',
+        label: 'Al Forrest',
+        name: 'name',
+        plus: true,
+        plusName: 'Pat Forrest'
+    },
+    {
+        value: 'Pat Forrest',
+        label: 'Pat Forrest',
+        name: 'name',
+        plus: true,
+        plusName: 'Al Forrest'
     }
 ]
 
