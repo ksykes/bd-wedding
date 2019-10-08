@@ -22,9 +22,9 @@ class App extends Component {
                       {/* <li>
                           <NavLink activeClassName="is-active" to='/registry'>Registry</NavLink>
                       </li> */}
-                      <li>
+                      {/* <li>
                           <NavLink activeClassName="is-active" to='/rsvp'>RSVP</NavLink>
-                      </li>
+                      </li> */}
                   </ul>
               </nav>
               <header className="App-header">
