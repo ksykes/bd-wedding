@@ -36,7 +36,7 @@ class App extends Component {
               <Route path='/bbq' component={BBQ} />
               <Route path="/details" component={Details} />
               {/* <Route path="/registry" component={Registry} /> */}
-              <Route path='/rsvp' component={RSVP} />
+              {/* <Route path='/rsvp' component={RSVP} /> */}
               <Route path='/rsvp/thanks' component={Thanks} />
               <footer>
                   <p>©<script type="text/javascript">document.write(new Date().getFullYear());</script> 2019 <a href="https://kaitsykes.com">Kait Sykes</a> • Made with ♥️</p>

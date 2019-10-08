@@ -25,7 +25,7 @@ class RSVP extends Component {
     // Alphabetize guest list
     alphabetize() {
         // From: https://css-tricks.com/snippets/javascript/alphabetizing-arrays-objects-and-arrays-of-objects/
-        const propComparator = (propName) => (a, b) => a[propName].toLowerCase() == b[propName].toLowerCase() ? 0 : a[propName].toLowerCase() < b[propName].toLowerCase() ? -1 : 1
+        const propComparator = (propName) => (a, b) => a[propName].toLowerCase() === b[propName].toLowerCase() ? 0 : a[propName].toLowerCase() < b[propName].toLowerCase() ? -1 : 1
         guests.sort(propComparator(`value`));
     }
 
