@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://bd-wedding.netlify.com/* http://brandieanddylan.com/:splat 301!
