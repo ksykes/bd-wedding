@@ -1,3 +1,3 @@
-Website for Brandie and Dylan's wedding
+# Website for Brandie and Dylan’s wedding
 
-Tutorial on React multi-step forms: https://css-tricks.com/the-magic-of-react-based-multi-step-forms/
+Built with [`create-react-app`](https://www.github.com/facebook/create-react-app) and [`google-map-react`](https://github.com/google-map-react/google-map-react).
