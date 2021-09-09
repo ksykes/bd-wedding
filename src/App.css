@@ -33,7 +33,8 @@ div#root section {
     line-height: 1.45rem;
 }
 
-span.mice {
+span.mice,
+p.mice {
     font-size: 0.8rem;
     margin-left: 0.75rem;
 }
@@ -126,6 +127,7 @@ section.details h4 {
     font-weight: bold;
     font-size:  1.3rem;
     line-height: 1.5rem;
+    margin: 1.75rem 0 0;
 }
 
 section.details div {
@@ -144,9 +146,14 @@ section.details h4::before {
     margin: 0 auto;
 }
 
-section.details h4 a {
+section.details h4 a,
+section.details .mice a {
     color: rgb(108, 70, 78);
     text-decoration: none;
+}
+
+section.details p.mice {
+    margin: 0 0 1.75rem;
 }
 
 section.details p.body {
