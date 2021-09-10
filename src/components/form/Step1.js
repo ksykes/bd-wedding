@@ -15,14 +15,14 @@ class Step1 extends Component {
             <div className="form-group">
                 <label htmlFor="name">
                     <Select
-                        value={guests.value}
+                        value={guests.name}
                         onChange={this.props.handleNameChange}
                         id="name"
                         name="name"
                         options={guests}
                         closeMenuOnSelect={true}
                         backspaceRemovesValue={true}
-                        placeholder={"Click and start typing to select your name:"}
+                        placeholder={"Click and start typing to select your name"}
                     />
                     Your full name
                 </label>

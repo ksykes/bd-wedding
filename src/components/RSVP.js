@@ -1,21 +1,50 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { initializeApp } from 'firebase/app'
+import { getFirestore, collection, query, orderBy, getDocs } from 'firebase/firestore'
 import Step1 from './form/Step1'
 import Step2 from './form/Step2'
 import guests from './data/guests'
 
-// Does something for the form
+// Firebase configuration
+const firebaseApp = initializeApp({
+    apiKey: "AIzaSyA04APN8FXCKz0EiAanW0g_3ranDy9DRZE",
+    authDomain: "brandie-and-dylans-wedding.firebaseapp.com",
+    projectId: "brandie-and-dylans-wedding"
+});
+
+const db = getFirestore();
+
+// Netlify form settings
 const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
 }
 
+// Get snapshot of guest list data from Firebase
+async function getGuests() {
+    const q = query(collection(db, "guests"), orderBy("name"));
+    const querySnapshot = await getDocs(q);
+    const guests = [];
+    // this.setState({ guests }, () => {
+    // })
+    querySnapshot.forEach((doc) => {
+        // console.log(doc.id, " => ", doc.data());
+        guests.push(doc.data());
+        // return doc.data();
+        // console.log(`${doc.id} => ${doc.data()}`);
+    });
+    this.setState({ guests });
+    console.log(guests)
+}
+
 class RSVP extends Component {
     constructor(props) {
         super(props);
+        getGuests();
         // Set the initial input values
-        this.state = { currentStep: 1, name: "", email: "", message: "", address: "", rsvp: "", dinner: "", restrictions: "", plus: "", plusOneName: "", plusOneDinner: "", plusOneRestrictions: "", reroute: false };
+        this.state = { currentStep: 1, guests: [], name: "", email: "", message: "", address: "", rsvp: "", dinner: "", restrictions: "", plus: "", plusOneName: "", plusOneDinner: "", plusOneRestrictions: "", reroute: false };
         // Bind new functions for next and previous
         this._next = this._next.bind(this)
         this._prev = this._prev.bind(this)
