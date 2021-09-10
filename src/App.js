@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom'
 import Details from './components/Details'
-import Registry from './components/Registry'
+// import Registry from './components/Registry'
 import RSVP from './components/RSVP'
 import BBQ from './components/BBQ'
 import Thanks from './components/Thanks'
