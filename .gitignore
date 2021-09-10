@@ -11,6 +11,9 @@
 # production
 /build
 
+# local Netlify folder
+.netlify
+
 # image source files
 /engagement_photos
 

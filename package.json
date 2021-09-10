@@ -11,13 +11,15 @@
     "react-scripts": "^4.0.3",
     "react-select": "^4.3.1"
   },
+  "devDependencies": {
+    "netlify-cli": "^6.8.11"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
